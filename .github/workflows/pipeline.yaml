@@ -34,7 +34,7 @@ jobs:
         run: pytest
         continue-on-error: true
 
-        deploy:
+  deploy:
     name: Deploy to Test Environment
     needs: build
     if: ${{ needs.build.result == 'success' }}
@@ -53,4 +53,3 @@ jobs:
         run: |
           # Add your deployment steps here
           echo "Deploying to test environment..."
-          
